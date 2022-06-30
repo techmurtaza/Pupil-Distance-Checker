@@ -12,3 +12,19 @@
 #reset-photo, #calculate{
     padding: .5em 1em;
 }
+div img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#canvas{
+    display: none;
+}
+#zoom {
+    border: 1px black solid;
+    box-shadow: 5px 5px 10px #1e1e1e;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    display: none
+}
