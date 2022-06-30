@@ -1,0 +1,14 @@
+#click-photo{
+    display: block;
+    transform: translate(10px, -150%);
+    padding: .5em 1em;
+}
+
+#reset-and-calculate-buttons{
+    display: block;
+    transform: translate(10px, -150%);
+    padding: 1em 1.5em;
+}
+#reset-photo, #calculate{
+    padding: .5em 1em;
+}
