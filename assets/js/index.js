@@ -16,8 +16,6 @@ let creditCardPathEnd = ''
 let fabricCanvas = new fabric.Canvas('canvasForFabric', {selection: false,});
 let canvasContainer = document.querySelector('.canvas-container');
 canvasContainer.style.display = 'none';
-canvasContainer.style.position = 'absolute';
-canvasContainer.style.top = '7px';
 
 var zoom = document.getElementById("zoom");
 var zoomCtx = zoom.getContext("2d");
@@ -32,11 +30,18 @@ async function startCamera() {
 
 click_button.addEventListener('click', function () {
     video_image_div.style.display = "none";
-    canvas.style.display = "block";
+    // canvas.style.display = "block";
     reset_and_calculate_buttons_div.style.display = "block";
     click_button.style.display = "none";
     canvasContainer.style.display = 'block';
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+    
+    let ctx = canvas.getContext('2d')
+    ctx.save(); 
+    ctx.scale(-1, 1); 
+    ctx.drawImage(video, canvas.width * -1, 0, canvas.width, canvas.height);
+    ctx.restore();
+
     backgroundImageDataURL = canvas.toDataURL();
     fabricCanvas.setBackgroundImage(backgroundImageDataURL, fabricCanvas.renderAll.bind(fabricCanvas), {
         backgroundImageStretch: false

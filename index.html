@@ -10,17 +10,19 @@
     <script defer src="assets/js/index.js"></script>
 </head>
 <body>
-    <div id="video-and-image">
-        <video id="video" width="640" height="480" autoplay></video>
-        <img src="assets/img/face.png" width="640" height="480" alt="">
+    <div class="main">
+        <div id="video-and-image">
+            <video id="video" width="640" height="480" autoplay></video>
+            <img src="assets/img/face.png" width="640" height="480" alt="">
+        </div>
+        <canvas id="canvas" width="640" height="480"></canvas>
+        <canvas  id="canvasForFabric" width="640" height="480"></canvas>
+        <button id="click-photo">Click Photo</button>
+        <div style="display: none;" id="reset-and-calculate-buttons">
+            <button  id="reset-photo">Reset Photo</button>
+            <button id="calculate">Calculate Pupil Distance</button>
+        </div>
+        <canvas id="zoom" width="200" height="200"></canvas>
     </div>
-    <canvas id="canvas" width="640" height="480"></canvas>
-    <canvas  id="canvasForFabric" width="640" height="480"></canvas>
-    <button id="click-photo">Click Photo</button>
-    <div style="display: none;" id="reset-and-calculate-buttons">
-        <button  id="reset-photo">reset Photo</button>
-        <button id="calculate">Calculate Distance</button>
-    </div>
-    <canvas id="zoom" width="200" height="200"></canvas>
 </body>
 </html>

@@ -9,17 +9,31 @@
     transform: translate(10px, -150%);
     padding: 1em 1.5em;
 }
+
 #reset-photo, #calculate{
     padding: .5em 1em;
 }
+
+main{
+    width: 640px;
+    height: 480px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
 div img{
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
 }
+
 #canvas{
     display: none;
 }
+
 #zoom {
     border: 1px black solid;
     box-shadow: 5px 5px 10px #1e1e1e;
@@ -27,4 +41,13 @@ div img{
     top: 0; 
     left: 0; 
     display: none
+}
+
+#video{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#video-and-image{
+    position: relative;
 }
